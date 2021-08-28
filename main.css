@@ -1,0 +1,141 @@
+:root {
+  box-sizing: border-box;
+  font-size: calc(1vw + 0.6em);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5em auto 5em auto;
+  width: 80%;
+}
+
+.upper-box {
+  flex: 1;
+  width: 100%;
+  margin: auto;
+  background-color: white;
+  padding: 1em 2em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.upper-box > h2 {
+  color: hsl(179, 62%, 43%);
+}
+
+.upper-box > h3 {
+  color: hsl(71, 73%, 54%);
+}
+
+.upper-box > p {
+  color: hsl(218, 22%, 67%);
+}
+
+.lower-box {
+  flex: 1.2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin: auto; */
+}
+
+.lower-box-1 {
+  flex: 1;
+  background-color: hsl(179, 62%, 43%);
+  padding: 1em 2em;
+  color: white;
+}
+
+.pricing {
+  display: flex;
+  font-size: calc(1vw + 2em);
+  font-weight: bold;
+}
+
+.pricing-duration {
+  font-size: calc(1vw + 0.3em);
+  align-self: center;
+  margin-left: 0.7em;
+  font-weight: 400;
+  color: hsl(204, 43%, 93%);
+}
+
+.lower-box-1 > p {
+  color: hsl(204, 43%, 93%);
+}
+
+.lower-box-1 > button {
+  padding: 0.8em 1.5em;
+  width: 100%;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  color: white;
+  border-radius: 0.5em;
+  font-size: calc(1vw + 0.7em);
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+.lower-box-2 {
+  flex: 1;
+  background-color: hsl(179, 55%, 58%);
+  padding: 1em 2em;
+  color: hsl(204, 43%, 93%);
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+.lower-box-2 > h2 {
+  color: white;
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: calc(1vw + 0.4em);
+  }
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 70%;
+    margin: 0;
+  }
+  .lower-box {
+    flex-direction: row;
+  }
+
+  .lower-box-1 {
+    border-bottom-left-radius: 0.5em;
+  }
+
+  .lower-box-1 > button {
+    font-size: calc(1vw + 0.4em);
+  }
+
+  .lower-box-2 {
+    border-bottom-left-radius: 0em;
+  }
+}
+
+@media (min-width: 1100px) {
+  :root {
+    font-size: calc(1vw + 0.2em);
+  }
+}
